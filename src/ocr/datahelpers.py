@@ -126,7 +126,7 @@ def _words2chars(images, labels, gaplines):
     
     height = images[0].shape[0]
     
-    idx = 0;
+    idx = 0
     for i, gaps in enumerate(gaplines):
         for pos in range(len(gaps) - 1):
             imgs[idx] = images[i][0:height, gaps[pos]:gaps[pos+1]]

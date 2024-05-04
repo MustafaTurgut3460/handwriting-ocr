@@ -18,10 +18,10 @@ def extract(location, output, number=3):
 
     for sub in ['cvl-database-1-1/testset', 'cvl-database-1-1/trainset']:
         folder = os.path.join(location, sub)
-        images = glob.glob(os.path.join(folder, 'words', '*', '*.tif'))
+        images = glob.glob(os.path.join(folder, 'words', '', '.tif'))
 
         for i, im in enumerate(images):
-            word = re.search('\/\d+-\d+-\d+-\d+-(.+?).tif', im).group(1)
+            word = re.search(r'\/\d+-\d+-\d+-\d+-(.+?)\.tif', im).group(1)
             word = unidecode.unidecode(word)
 
             if os.stat(im).st_size != 0:

@@ -15,11 +15,11 @@ def detection(image, join=False):
     Return: numpy array of bounding boxes [x, y, x+w, y+h]
     """
     # Preprocess image for word detection
-    blurred = cv2.GaussianBlur(image, (5, 5), 18)
+    blurred = cv2.GaussianBlur(image, (3, 3), 0)
     edge_img = _edge_detect(blurred)
     ret, edge_img = cv2.threshold(edge_img, 50, 255, cv2.THRESH_BINARY)
     bw_img = cv2.morphologyEx(edge_img, cv2.MORPH_CLOSE,
-                              np.ones((15,15), np.uint8))
+                              np.ones((5,5), np.uint8))
 
     return _text_detect(bw_img, image, join)
 

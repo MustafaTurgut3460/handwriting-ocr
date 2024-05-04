@@ -7,10 +7,10 @@ location = os.path.dirname(os.path.abspath(__file__))
 data_folder = os.path.join(location, '../../data/raw/')
 datasets = {
     'breta': [breta.extract, os.path.join(data_folder, 'breta'), 1],
-    'iam': [iam.extract, os.path.join(data_folder, 'iam'), 2],
-    'cvl': [cvl.extract, os.path.join(data_folder, 'cvl'), 3],
-    'orand': [orand.extract, os.path.join(data_folder, 'orand'), 4],
-    'camb': [camb.extract, os.path.join(data_folder, 'camb'), 5],
+    # 'iam': [iam.extract, os.path.join(data_folder, 'iam'), 2],
+    # 'cvl': [cvl.extract, os.path.join(data_folder, 'cvl'), 3],
+    # 'orand': [orand.extract, os.path.join(data_folder, 'orand'), 4],
+    # 'camb': [camb.extract, os.path.join(data_folder, 'camb'), 5],
 }
 
 output_folder = 'words_final'

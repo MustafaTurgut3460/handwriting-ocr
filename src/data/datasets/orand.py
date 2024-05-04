@@ -14,7 +14,7 @@ def extract(location, output, number=4):
     if not os.path.exists(output):
         os.makedirs(output)
 
-    for sub in ['ORAND-CAR-2014/CAR-A', 'ORAND-CAR-2014/CAR-B']:
+    for sub in ['CAR-A', 'CAR-B']:
         folder = os.path.join(location, sub)
         l_files = glob.glob(os.path.join(folder, '*.txt'))
         length = sum(1 for fl in l_files for line in open(fl))

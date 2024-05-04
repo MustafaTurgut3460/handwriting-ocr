@@ -5,7 +5,7 @@ Model       = Class for loading and using trained models from tensorflow
 create_cell = function for creatting RNN cells with wrappers
 """
 #import tensorflow as tf
-import tensorflow.compat.v1 as tf
+import tensorflow._api.v2.compat.v1 as tf
 from tensorflow.python.ops.rnn_cell_impl import LSTMCell, ResidualWrapper, DropoutWrapper, MultiRNNCell
 
 class Model():
